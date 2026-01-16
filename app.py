@@ -11,11 +11,11 @@ import matplotlib # 시각화
 import matplotlib.pyplot as plt # 그래프 그리기
 import seaborn as sns # 통계적 시각화
 
-# 폰트 꺠짐 해결
-import platform # 운영체제 확인용
+# --- 기존 폰트 설정 코드 삭제 후 아래로 대체 ---
+import koreanize_matplotlib 
 
-# --- 폰트 설정 추가 시작 ---
-from matplotlib import font_manager, rc
+# 마이너스 기호 깨짐 방지 (이것만 남겨두세요)
+plt.rcParams['axes.unicode_minus'] = False
 
 # 운영체제별 폰트 설정
 if platform.system() == 'Windows':
